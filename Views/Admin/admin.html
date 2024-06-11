@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/753189f1a5.css"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .nav-link {
+        color: black;
+        padding: 10px 20px;
+        display: inline-block;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: purple;
+        text-decoration: none;
+      }
+      .nav-link.active::after {
+        content: "";
+        display: block;
+        border-bottom: 3px solid purple;
+        transform: scaleX(1);
+        transition: transform 250ms ease-in-out;
+      }
+      .nav-link::after {
+        content: "";
+        display: block;
+        border-bottom: 3px solid purple;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+      }
+      .nav-link:hover::after {
+        transform: scaleX(1);
+      }
+      .sidebar {
+        background-color: #eee;
+        padding: 20px;
+      }
+      .sidebar button {
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: purple;
+        color: white;
+      }
+      .sidebar .btn-secondary {
+        background-color: #6c757d;
+      }
+      .sidebar .btn-primary:hover,
+      .sidebar .btn-secondary:hover {
+        background-color: darkorchid;
+      }
+      img {
+        height: 150px;
+      }
+      .filter-group {
+        margin-bottom: 20px;
+      }
+      .content {
+        display: none;
+      }
+      .content.active {
+        display: block;
+      }
+    </style>
+    <title>Admin Panel</title>
+  </head>
+  <body>
+    <nav class="d-flex justify-content-center py-3">
+      <a href="#" class="nav-link active" id="phone-list-link"
+        ><i class="fa-solid fa-mobile"></i> Список телефонов</a
+      >
+      <a href="#" class="nav-link" id="order-list-link"
+        ><i class="fa-solid fa-list"></i> Список заказов</a
+      >
+      <a href="#" class="nav-link" id="user-list-link"
+        ><i class="fa-solid fa-user"></i> Список пользователей</a
+      >
+      <a href="#" class="nav-link" id="assortment-list-link"
+        ><i class="fa-solid fa-plus"></i> Ассортимент</a
+      >
+      <a href="#" class="nav-link text-end ms-auto"
+        ><button class="btn btn-primary">Выход</button></a
+      >
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 sidebar">
+          <button class="btn btn-primary mb-3">Добавить</button>
+          <button class="btn btn-primary mb-3">Удалить</button>
+          <button class="btn btn-primary mb-3">Изменить</button>
+          <div class="filter-group">
+            <label for="roleFilter" class="form-label">Роль</label>
+            <select id="roleFilter" class="form-select">
+              <option selected>Все</option>
+              <option>Клиент</option>
+              <option>Менеджер</option>
+            </select>
+          </div>
+          <button class="btn btn-primary">Оформить заказ</button>
+        </div>
+
+        <div class="col-md-10">
+          <div id="phone-list" class="content active">
+            <table class="table table-hover mt-3">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Изображение</th>
+                  <th>Статус</th>
+                  <th>Серия</th>
+                  <th>Бренд</th>
+                  <th>Операционная система</th>
+                  <th>Процессор</th>
+                  <th>Дисплей</th>
+                  <th>Камера</th>
+                  <th>Батарея</th>
+                  <th>Страна</th>
+                  <th>Год производства</th>
+                  <th>Цена</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <img src="img\img1.png" alt="Телефон 1" />
+                  </td>
+                  <td>Продан</td>
+                  <td>15 Pro Max</td>
+                  <td>Apple</td>
+                  <td>iOS 17</td>
+                  <td>Apple A17 Pro</td>
+                  <td>6.7" (2796x1290), 2K QHD, OLED</td>
+                  <td>48 МП</td>
+                  <td>4422 мАч</td>
+                  <td>Китай</td>
+                  <td>2023</td>
+                  <td>220000</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <img src="img\img2.png" alt="Телефон 2" />
+                  </td>
+                  <td>Активные</td>
+                  <td>14</td>
+                  <td>Apple</td>
+                  <td>iOS 16</td>
+                  <td>Apple A15 Bionic</td>
+                  <td>6.1" (2523x1170), 4K UHD, OLED</td>
+                  <td>12 МП</td>
+                  <td>3279 мАч</td>
+                  <td>Китай</td>
+                  <td>2022</td>
+                  <td>100000</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <img src="img\img2.png" alt="Телефон 3" />
+                  </td>
+                  <td>Активные</td>
+                  <td>14 Plus</td>
+                  <td>Apple</td>
+                  <td>iOS 16</td>
+                  <td>Apple A15 Bionic</td>
+                  <td>6.7" (2778x1284), OLED</td>
+                  <td>12 МП</td>
+                  <td>4325 мАч</td>
+                  <td>Китай</td>
+                  <td>2022</td>
+                  <td>95000</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <img src="img\img3.png" alt="Телефон 4" />
+                  </td>
+                  <td>Активные</td>
+                  <td>13</td>
+                  <td>Apple</td>
+                  <td>iOS 15</td>
+                  <td>Apple A15 Bionic</td>
+                  <td>6.1" (2523x1170), Full HD, OLED</td>
+                  <td>12 МП</td>
+                  <td>3240 мАч</td>
+                  <td>Китай</td>
+                  <td>2021</td>
+                  <td>70000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="user-list" class="content">
+            <table class="table table-hover mt-3">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Роль</th>
+                  <th>Телефон</th>
+                  <th>ФИО</th>
+                  <th>Возраст</th>
+                  <th>Сумма заказов</th>
+                  <th>Кол-во заказов</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Клиент</td>
+                  <td>79526897990</td>
+                  <td>Кукарский Сергей Андреевич</td>
+                  <td>21</td>
+                  <td>328650</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Клиент</td>
+                  <td>79996666969</td>
+                  <td>Иванов Иван Иванович</td>
+                  <td>75</td>
+                  <td>29100</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Клиент</td>
+                  <td>7228551488</td>
+                  <td>Жмышенко Валерий Альбертович</td>
+                  <td>54</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Клиент</td>
+                  <td>7876543423</td>
+                  <td>Дэниел Киз</td>
+                  <td>76</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Клиент</td>
+                  <td>76547653409</td>
+                  <td>Александр Дюма</td>
+                  <td>68</td>
+                  <td>571850</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Менеджер</td>
+                  <td>111111111111</td>
+                  <td>Админ Админов</td>
+                  <td>50</td>
+                  <td>929600</td>
+                  <td>7</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="assortment-list" class="content">
+            <table class="table table-hover mt-3">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Изображение</th>
+                  <th>Наименование</th>
+                  <th>Стоимость</th>
+                  <th>Страна</th>
+                  <th>Кол-во продаж</th>
+                  <th>Сумма продаж</th>
+                  <th>Характеристика</th>
+                  <th>Поставщик</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <img src="img\зарядка для айфона.jpg" alt="Товар 1" />
+                  </td>
+                  <td>Зарядное устройство для iPhone</td>
+                  <td>550</td>
+                  <td>Китай</td>
+                  <td>1</td>
+                  <td>220550</td>
+                  <td>
+                    Блок зарядки USB-C (Type-C) мощностью 20 Вт в комплекте с
+                    кабелем Lightning - Type-C. Адаптер питания с мощностью 20
+                    Вт дает возможность быстро и эффективно заряжать устройство
+                    дома, в офисе или в пути. Всего за 14 часов — вы всегда
+                    будете на связи! Этот адаптер совместим с кабелями,
+                    окончающимися портом USB-C.
+                  </td>
+                  <td>Apple</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <img src="img\самсунг зарядка.jpg" alt="Товар 2" />
+                  </td>
+                  <td>Зарядное устройство SAMSUNG</td>
+                  <td>2350</td>
+                  <td>Китай</td>
+                  <td>1</td>
+                  <td>103250</td>
+                  <td>
+                    Сетевое зарядное устройство SAMSUNG EP-TA200EWEUG Quick
+                    Charger microUSB, 2A, белый
+                  </td>
+                  <td>Samsung</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <img src="img\акум самсунг.jpg" alt="Товар 3" />
+                  </td>
+                  <td>Внешний аккумулятор Samsung</td>
+                  <td>2100</td>
+                  <td>Китай</td>
+                  <td>1</td>
+                  <td>102100</td>
+                  <td>
+                    Основные характеристики - Тип аккумулятора: Li-Ion - Ёмкость
+                    аккумулятора: 10000 мАч - Сила тока: 3 А - Тип зарядки:
+                    быстрая зарядка - Назначение: для смартфона - Для планшета
+                    Интерфейсы - Порт USB 2.0: 2 - Порт USB Type-C: 1
+                    Дополнительные характеристики - Одновременная зарядка.
+                  </td>
+                  <td>Samsung</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <img src="img\сяоми.jpg" alt="Товар 4" />
+                  </td>
+                  <td>Xiaomi Mi Power Bank 3</td>
+                  <td>2100</td>
+                  <td>Китай</td>
+                  <td>3</td>
+                  <td>284500</td>
+                  <td>
+                    Невероятно емкий внешний аккумулятор Xiaomi Power Bank 3
+                    использует литий-ионные элементы питания общей емкостью
+                    30000 мАч. Такого запаса энергии хватит на 5-6 полных
+                    зарядов современных устройств (в зависимости от емкости их
+                    батарей). В системе имеются алгоритмы,
+                  </td>
+                  <td>Xiaomi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="order-list" class="content">
+            <table class="table table-hover mt-3">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Пользователь</th>
+                  <th>Менеджер</th>
+                  <th>Сумма</th>
+                  <th>Количество</th>
+                  <th>Статус</th>
+                  <th>Способ оплаты</th>
+                  <th>Дата создания</th>
+                  <th>Срок выполнения</th>
+                  <th>Дата доставки</th>
+                  <th>Дата уведомления</th>
+                  <th>Телефон</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Кукараский Сергей Андреевич</td>
+                  <td>Админ Админов</td>
+                  <td>226300</td>
+                  <td>2</td>
+                  <td>Продан</td>
+                  <td>Через карту</td>
+                  <td>05.06.2024 16:25:37</td>
+                  <td>09.06.2024 00:00</td>
+                  <td>07.06.2024 16:25:37</td>
+                  <td>07.06.2024 00:00</td>
+                  <td>Apple</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Кукараский Сергей Андреевич</td>
+                  <td>Админ Админов</td>
+                  <td>102350</td>
+                  <td>2</td>
+                  <td>Задерживается</td>
+                  <td>Через карту</td>
+                  <td>29.05.2024 16:27:00</td>
+                  <td>05.06.2024 00:00</td>
+                  <td>07.06.2024 16:27:00</td>
+                  <td>05.06.2024 00:00</td>
+                  <td>Samsung</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Иванов Иван Иванович</td>
+                  <td>Админ Админов</td>
+                  <td>29100</td>
+                  <td>2</td>
+                  <td>Продан</td>
+                  <td>Наличными</td>
+                  <td>29.05.2024 16:27:00</td>
+                  <td>05.06.2024 00:00</td>
+                  <td>05.06.2024 16:27:00</td>
+                  <td>05.06.2024 00:00</td>
+                  <td>Xiaomi</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Александр Дюма</td>
+                  <td>Админ Админов</td>
+                  <td>220100</td>
+                  <td>2</td>
+                  <td>В процессе</td>
+                  <td>Через карту</td>
+                  <td>31.05.2024 16:27:00</td>
+                  <td>05.06.2024 00:00</td>
+                  <td>05.06.2024 16:27:00</td>
+                  <td>03.06.2024 00:00</td>
+                  <td>Apple</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Александр Дюма</td>
+                  <td>Админ Админов</td>
+                  <td>29100</td>
+                  <td>2</td>
+                  <td>Просрочен</td>
+                  <td>Наличными</td>
+                  <td>20.05.2024 16:27:00</td>
+                  <td>27.05.2024 00:00</td>
+                  <td>03.06.2024 16:27:00</td>
+                  <td>03.06.2024 00:00</td>
+                  <td>Xiaomi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("order-list-link")
+        .addEventListener("click", function () {
+          document.getElementById("order-list").classList.add("active");
+          document.getElementById("user-list").classList.remove("active");
+          document.getElementById("assortment-list").classList.remove("active");
+          document.getElementById("phone-list").classList.remove("active");
+          this.classList.add("active");
+          document.getElementById("user-list-link").classList.remove("active");
+          document
+            .getElementById("assortment-list-link")
+            .classList.remove("active");
+          document.getElementById("phone-list-link").classList.remove("active");
+        });
+
+      document
+        .getElementById("assortment-list-link")
+        .addEventListener("click", function () {
+          document.getElementById("assortment-list").classList.add("active");
+          document.getElementById("user-list").classList.remove("active");
+          document.getElementById("order-list").classList.remove("active");
+          document.getElementById("phone-list").classList.remove("active");
+          this.classList.add("active");
+          document.getElementById("order-list-link").classList.remove("active");
+          document.getElementById("user-list-link").classList.remove("active");
+          document.getElementById("phone-list-link").classList.remove("active");
+        });
+
+      document
+        .getElementById("phone-list-link")
+        .addEventListener("click", function () {
+          document.getElementById("phone-list").classList.add("active");
+          document.getElementById("order-list").classList.remove("active");
+          document.getElementById("user-list").classList.remove("active");
+          document.getElementById("assortment-list").classList.remove("active");
+          this.classList.add("active");
+          document.getElementById("user-list-link").classList.remove("active");
+          document.getElementById("order-list-link").classList.remove("active");
+          document
+            .getElementById("assortment-list-link")
+            .classList.remove("active");
+        });
+
+      document
+        .getElementById("user-list-link")
+        .addEventListener("click", function () {
+          document.getElementById("user-list").classList.add("active");
+          document.getElementById("order-list").classList.remove("active");
+          document.getElementById("assortment-list").classList.remove("active");
+          document.getElementById("phone-list").classList.remove("active");
+          this.classList.add("active");
+          document
+            .getElementById("assortment-list-link")
+            .classList.remove("active");
+          document.getElementById("phone-list-link").classList.remove("active");
+          document.getElementById("order-list-link").classList.remove("active");
+        });
+    </script>
+  </body>
+</html>

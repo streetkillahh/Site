@@ -1,0 +1,180 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+/* Контейнер слайдера, кнопок и изображения */
+.container {
+  width: 500px;
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+/* Контейнер содержимого слайдера */
+.carousel {
+  height: 550px;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+}
+
+/* контейнер для изображения */
+.carousel-inner {
+  height: 500px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Изображение внутри контейнера слайдера */
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  align-items: flex-start;
+}
+.carousel-item h3 {
+  justify-content: center;
+}
+.carousel-item span {
+  font-size: 15px;
+  text-align: center;
+}
+.carousel-indicators {
+  margin-bottom: 0px;
+}
+.carousel-indicators-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 20px;
+  margin-top: auto;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  align-self: center;
+  position: absolute;
+  z-index: 10; /* Повышение z-index, чтобы кнопки были на переднем плане */
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  /* Изначально скрыто */
+  /* opacity: 0; 
+  transition: opacity 0.3s; */
+}
+/* Цвет кнопок */
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+  filter: invert(100%);
+}
+
+
+
+/* PHONE CARDS */
+.card-img {
+  height: 100px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+.card-column .card {
+  border: none;
+}
+.card-column > .col:not(:last-child) {
+  border-bottom: 1px #ccc solid;
+  padding-bottom: 1rem;
+}
+.card-column .card-img-top {
+  height: 200px;
+  width: auto;
+}
+/* image card content */
+.card-body-image{
+  display: flex;
+  justify-content: center;
+  width: 15%;
+}
+/* center сard content */
+.card-body-main {
+  width: 75%;
+}
+
+/* card price content */
+.card-body-price{
+  width: 22.5%;
+}
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* button alignment */
+.text-center {
+  text-align: center;
+}
+.card-button {
+  margin-top: 25px;
+}
+/* Padding around product card */
+.card-column > .col:not(:last-child) {
+  margin-top: 0;
+  padding-top: calc(var(--bs-gutter-x) * 0.5);
+  padding-bottom: calc(var(--bs-gutter-x) * 0.5);
+}
+.card-price {
+  margin-top: 20px;
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* FILTERS FOR PHONES */
+.phone-filter-container > div:not(:last-child) {
+  border-bottom: 1px #ccc solid;
+  padding-bottom: 0.5rem;
+}
+.phone-filter-container .phone-filter-header {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0.75rem;
+}
+
+.body-user {
+  border-radius: 15px;
+  border: 1px #c6c6c6 solid;
+  width: 40%;
+}
+
+/* Product Info */
+.chars-overall p {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.container-phone {
+  border: 1px #333333 solid;
+}
+
+/* wave */
+.header {
+  min-height: 50px;
+  background-color: #d37ba8;
+  background-image: linear-gradient(to bottom, rgba(#715, 0.5), transparent);
+  color: #ddf;
+}
+
+.canvas-wrap {
+  max-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(0%);
+}
+
+canvas {
+  display: block;
+}
