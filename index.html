@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phones</title>
+    <title>TalkieTown</title>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,73 +26,273 @@
     ></script>
   </head>
   <body>
-    <header>
-      <nav class="navbar shadow navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" style="font-weight: bold" href="#"
-            >TalkieTown</a
-          >
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Главная -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Главная</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
-                  >Смартфоны</a
-                >
-              </li>
-            </ul>
-            <!-- Поиск -->
-            <form class="d-flex" role="search">
-              <!-- Search -->
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Поиск"
-                aria-label="Search"
-              />
-              <button id="a" class="btn link button_search" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-              <!-- Basket -->
-              <button id="Basket" class="btn link button_search">
-                <i class="fa-solid fa-basket-shopping"></i>
-              </button>
-            </form>
-            <!-- Регистрация/Вход -->
-            <div class="mx-2">
-              <button type="button" class="btn btn-outline-info btn-sm">
-                Регистрация
-              </button>
-              <button type="button" class="btn btn-info btn-sm">Вход</button>
+    <div class="d-flex flex-column justify-content-center">
+      <header>
+        <!-- Починить alignment кнопок, кнопки после talkietown находятся выше -->
+        <nav
+          style="padding: 10px"
+          class="navbar shadow navbar-expand-lg bg-body-tertiary"
+        >
+          <div class="container-fluid">
+            <a
+              class="font-inter navbar-brand"
+              style="font-weight: bold"
+              href="/index.html"
+              >TalkieTown</a
+            >
+            <div
+              style="height: 40px"
+              class="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <!-- Главная -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="font-inter nav-link active"
+                    aria-current="page"
+                    href="/index.html"
+                    >Главная</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="font-inter nav-link active"
+                    aria-current="page"
+                    href="/Product page/Phones.html"
+                    >Смартфоны</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="font-inter nav-link active"
+                    aria-current="page"
+                    href="#"
+                    >Аксессуары</a
+                  >
+                </li>
+              </ul>
+              <!-- Поиск -->
+              <form class="d-flex" role="search">
+                <!-- Search -->
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Поиск"
+                  aria-label="Search"
+                />
+                <button id="a" class="btn link button_search" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!-- Basket -->
+                <button id="Basket" class="btn link button_search">
+                  <i class="fa-solid fa-basket-shopping"></i>
+                </button>
+              </form>
+              <!-- Регистрация/Вход -->
+              <div class="mx-2">
+                <button type="button" class="btn btn-outline-info btn-sm">
+                  Регистрация
+                </button>
+                <button type="button" class="btn btn-info btn-sm">Вход</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Hero section -->
+      <div class="hero-section d-flex row my-4 mx-0">
+        <!-- 1st column -->
+        <div class="col-7 px-0">
+          <img class="section-image" src="img\manphone.jpg" alt="" />
+        </div>
+        <!-- 2nd column -->
+        <div style="padding-left: 25px" class="col-5 pr-0">
+          <!-- Main heading -->
+          <div style="padding-bottom: 15px" class="row">
+            <h1 class="main-headingh1">
+              TalkieTown – все для связи и комфорта в одном месте!
+            </h1>
+          </div>
+          <!-- Body text -->
+          <div style="padding-bottom: 25px" class="row">
+            <p class="body-text">
+              TalkieTown - ваш надежный партнер в мире смартфонов и аксессуаров.
+              У нас вы найдете новейшие модели и качественные аксессуары по
+              доступным ценам. TalkieTown – инновации и комфорт всегда рядом с
+              вами!
+            </p>
+          </div>
+          <!-- Buttons -->
+          <div>
+            <button style="margin-right: 10px" class="btn main-btn sub-heading">
+              СМАРТФОНЫ
+            </button>
+            <button class="btn secondary-btn sub-heading">АКСЕССУАРЫ</button>
+          </div>
+        </div>
+      </div>
+      <!-- Logos -->
+      <div class="logo-section d-flex row my-4 mx-0">
+        <p style="align-self: flex-start" class="sub-heading px-0 mb-0">
+          ПРЕДСТАВЛЯЕМ
+        </p>
+        <div
+          style="height: 100px; background-color: #f4f4f4"
+          class="logo-section-logos d-flex px-0"
+        >
+          <img
+            class="col-4 px-0"
+            style="height: 50px; width: 201px"
+            src="/img/logo/logo-iphone.png"
+            alt="iphone logo"
+          />
+          <img
+            class="col-4 px-0"
+            style="height: 45px; width: 220px"
+            src="/img/logo/logo-samsung.png"
+            alt="samsung logo"
+          />
+          <img
+            class="col-4 px-0"
+            style="height: 67px; width: 195px"
+            src="/img/logo/logo-xiaomi.png"
+            alt="xiaomi logo"
+          />
+        </div>
+      </div>
+      <!-- Compare section -->
+      <div class="compare-section d-flex row my-4 mx-0">
+        <!-- 1st column -->
+        <div style="justify-content: center" class="row d-flex col-5 px-0">
+          <!-- Main heading -->
+          <h2 style="padding-bottom: 15px" class="main-headingh2">
+            Функция сравнения товаров
+          </h2>
+          <!-- Body text -->
+          <p style="padding-bottom: 25px" class="body-text">
+            Сравнивайте смартфоны и аксессуары в TalkieTown легко и быстро. Наш
+            удобный интерфейс позволяет сравнивать характеристики, цены и отзывы
+            нескольких товаров одновременно, помогая вам сделать обоснованный
+            выбор. Найдите идеальный вариант с помощью TalkieTown!
+          </p>
+          <button class="btn main-btn sub-heading">СРАВНИТЬ</button>
+        </div>
+        <!-- 2nd column -->
+        <div class="col-7 px-0">
+          <img class="section-image" src="img\peoplephone.jpg" alt="" />
+        </div>
+      </div>
+      <!-- Testimonials section -->
+      <div class="testiomonials-section d-flex row my-4 mx-0">
+        <p style="margin-top: 50px" class="sub-heading p-0 mb-0">ОТЗЫВЫ</p>
+        <h2 style="margin-top: 20px" class="main-headingh2 p-0 mb-0">
+          Узнайте, что наши клиенты говорят о TalkieTown!
+        </h2>
+        <!-- Testimonials items -->
+        <div class="testimonial-items row">
+          <!-- 1st card -->
+          <div class="testimonial-item row">
+            <!-- Avatar -->
+            <img src="img\Testimonial avatars\frank.png" alt="avatar" />
+            <!-- Text -->
+            <div style="align-self: flex-start">
+              <p style="margin-top: 100px" class="sub-heading mb-0">ФРЭНК</p>
+              <p class="review-text">
+                TalkieTown просто супер! Заказывал здесь аксессуары для своего
+                телефона, и все прошло безупречно. Большой выбор, отличные цены
+                и быстрая доставка. Особенно порадовала возможность предзаказа
+                новых моделей, благодаря чему я всегда в курсе новинок.
+                Обязательно вернусь сюда за следующими покупками.
+              </p>
+            </div>
+          </div>
+          <!-- 2nd card -->
+          <div class="testimonial-item row">
+            <!-- Avatar -->
+            <img src="img\Testimonial avatars\davie.jpg" alt="avatar" />
+            <!-- Text -->
+            <div style="align-self: flex-start">
+              <p style="margin-top: 100px" class="sub-heading mb-0">ДЭВИ</p>
+              <p class="review-text">
+                Я недавно сделал покупку в интернет-магазине TalkieTown и
+                остался очень доволен! Широкий ассортимент смартфонов и
+                аксессуаров позволил мне быстро найти нужные товары. Порадовали
+                частые акции и скидки, благодаря которым я смог сэкономить.
+                Доставка была быстрой и без задержек, а служба поддержки
+                оперативно ответила на все мои вопросы. Обязательно буду
+                покупать здесь снова и рекомендую TalkieTown всем друзьям и
+                знакомым!
+              </p>
+            </div>
+          </div>
+          <!-- 3rd card -->
+          <div class="testimonial-item row">
+            <!-- Avatar -->
+            <img src="img\Testimonial avatars\Eddie.png" alt="avatar" />
+            <!-- Text -->
+            <div style="align-self: flex-start">
+              <p style="margin-top: 100px" class="sub-heading mb-0">ЭДДИ</p>
+              <p class="review-text">
+                Я купил новый смартфон в TalkieTown, и это был отличный опыт!
+                Сайт очень удобный, и я смог легко сравнить несколько моделей
+                перед покупкой. Понравилась программа лояльности с бонусами,
+                которая позволила мне сэкономить. Доставка была быстрой, а
+                упаковка надежной. Спасибо TalkieTown за отличный сервис!
+              </p>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <div class="d-flex flex-column">
-      <footer class="border-top text-muted">
-        <div class="container d-flex justify-content-center">
-          &copy; 2024 - TalkieTown - Privacy
+      </div>
+      <!-- Transfer section -->
+      <div class="transfer-section d-flex row my-4 mx-0">
+        <p style="margin-top: 75px; margin-bottom: 20px" class="sub-heading">
+          ГОТОВЫ НАЧАТЬ?
+        </p>
+        <h2 class="main-headingh2 mb-0">
+          Прекратите искать и начните наслаждаться<br />
+          покупками уже сейчас!
+        </h2>
+        <button style="margin-top: 75px" class="btn main-btn sub-heading">
+          ПЕРЕЙТИ К ПОКУПКАМ
+        </button>
+      </div>
+      <footer class="border-top text-muted d-flex">
+        <!-- Footer container -->
+        <div class="footer-section d-flex row my-4 mx-0">
+          <!-- Столбцы футера -->
+          <h4 class="col-2 footer-head-text">TalkieTown</h4>
+          <div class="col-2">
+            <h4 class="footer-head-text">О нас</h4>
+            <p class="footer-text">Наша история</p>
+            <p class="footer-text">Наша команда</p>
+            <p class="footer-text">Карьера</p>
+          </div>
+          <div class="col-2">
+            <h4 class="footer-head-text">Помощь</h4>
+            <p class="footer-text">FAQ</p>
+            <p class="footer-text">Поддержка</p>
+            <p class="footer-text">Контакты</p>
+          </div>
+          <div class="col-3">
+            <h4 class="footer-head-text">Политики</h4>
+            <p class="footer-text">Конфиденциальность</p>
+            <p class="footer-text">Условия использования</p>
+            <p class="footer-text">Политика возврата</p>
+          </div>
+          <div class="col-3">
+            <h4 class="footer-head-text">Следите за нами</h4>
+            <p class="footer-text">Вконтакте</p>
+            <p class="footer-text">Телеграмм</p>
+            <p class="footer-text">Youtube</p>
+          </div>
+          <div class="col-12 footer-text" style="justify-self: center;">© 2024 TalkieTown. Все права защищены.</div>
         </div>
       </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#carouselExample").carousel({
-          interval: 5000,
-          ride: "carousel",
-          pause: "hover",
-        });
-      });
-    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -102,6 +302,5 @@
       src="https://kit.fontawesome.com/d7278d699d.js"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
   </body>
 </html>

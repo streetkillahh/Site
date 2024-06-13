@@ -3,6 +3,163 @@ body {
   height: 100%;
   margin: 0;
 }
+footer{
+  justify-content: center;
+}
+.font-inter {
+  font-family: Inter;
+  padding: 0px;
+}
+.main-headingh1 {
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: bold;
+}
+.main-headingh2 {
+  font-family: Inter;
+  font-size: 35px;
+  font-weight: bold;
+}
+.sub-heading {
+  /* font-family: Outfit; */
+  font-size: 18px;
+  font-weight: bold;
+}
+.body-text {
+  /* font-family: Roboto; */
+  font-size: 18px;
+  font-weight: normal;
+}
+.review-text {
+  /* font-family: Roboto; */
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  padding-left: 12px;
+  pading-right: 12px;
+}
+.footer-head-text{
+  /* font-family: Outfit; */
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer-text{
+  font-size: 18px;
+
+}
+.section-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main-btn {
+  height: 55px;
+  width: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgba(207, 244, 252);
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.secondary-btn {
+  height: 55px;
+  width: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 2px #cff4fc solid;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.hero-section {
+  height: 500px;
+  width: 1065px; /* 50% */
+  align-self: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+.logo-section {
+  height: 129px;
+  width: 1065px; /* 50% */
+  align-self: center;
+}
+.logo-section-logos {
+  height: 100px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+.compare-section {
+  height: 500px;
+  width: 1065px; /* 50% */
+  align-self: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+}
+.testiomonials-section {
+  height: 730px;
+  width: 1065px; /* 50% */
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+.testimonial-items {
+  padding: 0px;
+  height: 450px;
+  margin-top: 50px;
+  margin-right: 0px;
+  margin-left: 0px;
+  gap: 15px;
+}
+.testimonial-item {
+  padding: 0px;
+  width: 340px;
+  border-radius: 20px;
+  background-color: #cff4fc;
+  margin: 0px;
+  justify-content: center;
+  position: relative;
+}
+.testimonial-item img {
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border: 5px solid #e0f7fa; */
+  padding: 0px;
+}
+.transfer-section{
+  height: 400px;
+  width: 1065px;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  align-content: flex-start;
+  border-radius: 20px;
+  background: linear-gradient(#CFF4FC,#F4F4F4);
+}
+.footer-section{
+  height: 270px;
+  width: 1065px;
+  align-self: center;
+  justify-content: center;
+}
+.footer-section h4{
+  font-size: 22px;
+  /* font-family: Outfit; */
+  font-weight: bold;
+}
 /* Контейнер слайдера, кнопок и изображения */
 .container {
   width: 500px;
@@ -68,11 +225,9 @@ body {
 }
 /* Цвет кнопок */
 .carousel-control-next-icon,
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
   filter: invert(100%);
 }
-
-
 
 /* PHONE CARDS */
 .card-img {
@@ -93,7 +248,7 @@ body {
   width: auto;
 }
 /* image card content */
-.card-body-image{
+.card-body-image {
   display: flex;
   justify-content: center;
   width: 15%;
@@ -104,7 +259,7 @@ body {
 }
 
 /* card price content */
-.card-body-price{
+.card-body-price {
   width: 22.5%;
 }
 .card-body {
