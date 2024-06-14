@@ -28,7 +28,6 @@
   <body>
     <div class="d-flex flex-column justify-content-center">
       <header>
-        <!-- Починить alignment кнопок, кнопки после talkietown находятся выше -->
         <nav
           style="padding: 10px"
           class="navbar shadow navbar-expand-lg bg-body-tertiary"
@@ -63,7 +62,7 @@
                     >Смартфоны</a
                   >
                 </li>
-                <li>
+                <li class="nav-item">
                   <a
                     class="font-inter nav-link active"
                     aria-current="page"
@@ -76,25 +75,25 @@
               <form class="d-flex" role="search">
                 <!-- Search -->
                 <input
-                  class="form-control me-2"
+                  class="form-control"
                   type="search"
                   placeholder="Поиск"
                   aria-label="Search"
                 />
-                <button id="a" class="btn link button_search" type="submit">
+                <button id="a" class="btn link button_search me-2" type="submit">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <!-- Basket -->
-                <button id="Basket" class="btn link button_search">
+                <button id="Basket" class="btn link button_search me-2">
                   <i class="fa-solid fa-basket-shopping"></i>
                 </button>
               </form>
               <!-- Регистрация/Вход -->
               <div class="mx-2">
-                <button type="button" class="btn btn-outline-info btn-sm">
+                <button type="button" class="btn secondary-btn sub-heading" style="height: 43px; margin-right: 5px">
                   Регистрация
                 </button>
-                <button type="button" class="btn btn-info btn-sm">Вход</button>
+                <button type="button" class="btn main-btn sub-heading" style="height: 43px">Вход</button>
               </div>
             </div>
           </div>
@@ -185,8 +184,8 @@
       </div>
       <!-- Testimonials section -->
       <div class="testiomonials-section d-flex row my-4 mx-0">
-        <p style="margin-top: 50px" class="sub-heading p-0 mb-0">ОТЗЫВЫ</p>
-        <h2 style="margin-top: 20px" class="main-headingh2 p-0 mb-0">
+        <p style="margin-top: 50px;"  class="sub-heading p-0 mb-0">ОТЗЫВЫ</p>
+        <h2  class="main-headingh2 p-0 mb-0">
           Узнайте, что наши клиенты говорят о TalkieTown!
         </h2>
         <!-- Testimonials items -->
@@ -264,29 +263,83 @@
           <h4 class="col-2 footer-head-text">TalkieTown</h4>
           <div class="col-2">
             <h4 class="footer-head-text">О нас</h4>
-            <p class="footer-text">Наша история</p>
-            <p class="footer-text">Наша команда</p>
-            <p class="footer-text">Карьера</p>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Наша история</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Наша команда</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Карьера</a
+            >
           </div>
           <div class="col-2">
             <h4 class="footer-head-text">Помощь</h4>
-            <p class="footer-text">FAQ</p>
-            <p class="footer-text">Поддержка</p>
-            <p class="footer-text">Контакты</p>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >FAQ</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Поддержка</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Контакты</a
+            >
           </div>
           <div class="col-3">
             <h4 class="footer-head-text">Политики</h4>
-            <p class="footer-text">Конфиденциальность</p>
-            <p class="footer-text">Условия использования</p>
-            <p class="footer-text">Политика возврата</p>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Конфиденциальность</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Условия использования</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Политика возврата</a
+            >
           </div>
           <div class="col-3">
             <h4 class="footer-head-text">Следите за нами</h4>
-            <p class="footer-text">Вконтакте</p>
-            <p class="footer-text">Телеграмм</p>
-            <p class="footer-text">Youtube</p>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Вконтакте</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Телеграмм</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Youtube</a
+            >
           </div>
-          <div class="col-12 footer-text" style="justify-self: center;">© 2024 TalkieTown. Все права защищены.</div>
+          <div class="col-12 d-flex justify-content-center mt-4">
+            <span>© 2024 TalkieTown. Все права защищены.</span>
+          </div>
         </div>
       </footer>
     </div>

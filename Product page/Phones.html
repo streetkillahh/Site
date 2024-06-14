@@ -27,22 +27,46 @@
   </head>
   <body class="backgroundImage h-100">
     <header>
-      <nav class="navbar shadow navbar-expand-lg bg-body-tertiary">
+      <nav
+        style="padding: 10px"
+        class="navbar shadow navbar-expand-lg bg-body-tertiary"
+      >
         <div class="container-fluid">
-          <a class="navbar-brand" style="font-weight: bold" href="/index.html"
+          <a
+            class="font-inter navbar-brand"
+            style="font-weight: bold"
+            href="/index.html"
             >TalkieTown</a
           >
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            style="height: 40px"
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
             <!-- Главная -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index.html"
+                <a
+                  class="font-inter nav-link active"
+                  aria-current="page"
+                  href="/index.html"
                   >Главная</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a
+                  class="font-inter nav-link active"
+                  aria-current="page"
+                  href="/Product page/Phones.html"
                   >Смартфоны</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="font-inter nav-link active"
+                  aria-current="page"
+                  href="#"
+                  >Аксессуары</a
                 >
               </li>
             </ul>
@@ -50,25 +74,25 @@
             <form class="d-flex" role="search">
               <!-- Search -->
               <input
-                class="form-control me-2"
+                class="form-control"
                 type="search"
                 placeholder="Поиск"
                 aria-label="Search"
               />
-              <button id="a" class="btn link button_search" type="submit">
+              <button id="a" class="btn link button_search me-2" type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
               <!-- Basket -->
-              <button id="Basket" class="btn link button_search">
+              <button id="Basket" class="btn link button_search me-2">
                 <i class="fa-solid fa-basket-shopping"></i>
               </button>
             </form>
             <!-- Регистрация/Вход -->
             <div class="mx-2">
-              <button type="button" class="btn btn-outline-info btn-sm">
+              <button type="button" class="btn secondary-btn sub-heading" style="height: 43px; margin-right: 5px">
                 Регистрация
               </button>
-              <button type="button" class="btn btn-info btn-sm">Вход</button>
+              <button type="button" class="btn main-btn sub-heading" style="height: 43px">Вход</button>
             </div>
           </div>
         </div>
@@ -595,9 +619,90 @@
         </div>
       </div>
       <!-- Footer -->
-      <footer class="border-top text-muted">
-        <div class="container d-flex justify-content-center">
-          &copy; 2024 - TalkieTown - Privacy
+      <footer class="border-top text-muted d-flex">
+        <!-- Footer container -->
+        <div class="footer-section d-flex row my-4 mx-0">
+          <!-- Столбцы футера -->
+          <h4 class="col-2 footer-head-text">TalkieTown</h4>
+          <div class="col-2">
+            <h4 class="footer-head-text">О нас</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Наша история</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Наша команда</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Карьера</a
+            >
+          </div>
+          <div class="col-2">
+            <h4 class="footer-head-text">Помощь</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >FAQ</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Поддержка</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Контакты</a
+            >
+          </div>
+          <div class="col-3">
+            <h4 class="footer-head-text">Политики</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Конфиденциальность</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Условия использования</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Политика возврата</a
+            >
+          </div>
+          <div class="col-3">
+            <h4 class="footer-head-text">Следите за нами</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Вконтакте</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Телеграмм</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Youtube</a
+            >
+          </div>
+          <div class="col-12 d-flex justify-content-center mt-4">
+            <span>© 2024 TalkieTown. Все права защищены.</span>
+          </div>
         </div>
       </footer>
     </div>
