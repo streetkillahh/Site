@@ -1,89 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Авторизация</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="30" height="30"
-                alt="" loading="lazy">
-        </a>
-        <a class="navbar-brand" href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Nuxt_logo.svg" width="30" height="30" alt=""
-                loading="lazy">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="d-flex flex-column justify-content-center">
+      <header>
+        <nav
+          style="padding: 10px"
+          class="navbar shadow navbar-expand-lg bg-body-tertiary"
+        >
+          <div class="container-fluid">
+            <a
+              class="font-inter navbar-brand"
+              style="font-weight: bold"
+              href="/index.html"
+              >TalkieTown</a
+            >
+            <div
+              style="height: 40px"
+              class="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <!-- Главная -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="font-inter nav-link active"
+                    aria-current="page"
+                    href="/index.html"
+                    >Главная</a
+                  >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Контакты</a>
+                  <a
+                    class="font-inter nav-link active"
+                    aria-current="page"
+                    href="/Product page/Phones.html"
+                    >Смартфоны</a
+                  >
                 </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">Поиск</button>
-                <a href="#" class="btn btn-outline-light mr-2">Вход</a>
-                <a href="#" class="btn btn-outline-light mr-2">Регистрация</a>
-                <a href="#" class="btn btn-outline-light mr-2">Выход</a>
-            </form>
-        </div>
-    </nav>
-
-
-
-
-
-    <div class="text-center">
-        <form class="form-signin" method="get" action="">
-            <h1 class="h3 mb-3 mt-3 font-weight-normal">Пожалуйста, укажите логин и пароль</h1>
-            
-            <label for="inputUsername" class="sr-only">Имя пользователя</label>
-            <input id="inputUsername" class="form-control" placeholder="Имя пользователя" required="">
-
-            <label for="inputPassword" class="sr-only">Пароль</label>
-            <input id="inputPassword" class="form-control mt-2" type="password" placeholder="Пароль" required="">
-
-            <button class="btn btn-lg btn-primary mt-2 btn-block" type="submit">Войти</button>
-        </form>
-    </div>
-
-
-
-
-    <div class="pt-1">
-        <footer class="footer">
-            <div class="container">
-                <div class="d-flex flex-row justify-content-between">
-                    <span class="text-muted">Агентство по разработке потрясных сайтов на bootstrap, drf и nuxtJS. А это
-                        просто наш блог.</span>
-                    <a href="#">Наверх</a>
-                </div>
+                <li class="nav-item">
+                  <a
+                    class="font-inter nav-link active"
+                    aria-current="page"
+                    href="#"
+                    >Аксессуары</a
+                  >
+                </li>
+              </ul>
+              <!-- Поиск -->
+              <form class="d-flex" role="search">
+                <!-- Search -->
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Поиск"
+                  aria-label="Search"
+                />
+                <button
+                  id="a"
+                  class="btn link button_search me-2"
+                  type="submit"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+              <!-- Basket -->
+              <button id="Basket" class="btn link button_search me-2">
+                <i class="fa-solid fa-basket-shopping"></i>
+              </button>
+              <!-- Регистрация/Вход -->
+              <div class="mx-2">
+                <a href="/Views/User/signup.html">
+                  <button
+                    type="button"
+                    class="btn secondary-btn sub-heading"
+                    style="height: 43px; margin-right: 5px"
+                  >
+                    Регистрация
+                  </button>
+                </a>
+                <a href="/Views/User/signin.html"
+                  ><button
+                    type="button"
+                    class="btn main-btn sub-heading"
+                    style="height: 43px"
+                  >
+                    Вход
+                  </button></a
+                >
+              </div>
             </div>
-        </footer>
+          </div>
+        </nav>
+      </header>
+      <!-- Login window -->
+      <div class="login-window-card d-flex flex-column row mx-0 col-10">
+        <h4>АВТОРИЗАЦИЯ</h4>
+        <!-- Fields -->
+        <div
+          style="align-items: center; justify-content: center"
+          class="d-flex flex-column"
+        >
+          <input
+            class="form-control input-field"
+            type="number"
+            placeholder="Номер телефона"
+            aria-label="Phone-number"
+          />
+          <input
+            class="form-control input-field"
+            type="password"
+            placeholder="Пароль"
+            aria-label="Password"
+          />
+        </div>
+        <button
+          class="btn sub-heading main-btn"
+          style="background-color: #ecfcff; margin-bottom: 30px"
+        >
+          Войти
+        </button>
+        <a link="#" style="margin-bottom: 65px">Забыли пароль?</a>
+      </div>
+      <footer class="border-top text-muted d-flex justify-content-center">
+        <!-- Footer container -->
+        <div class="footer-section d-flex row my-4 mx-0">
+          <!-- Столбцы футера -->
+          <h4 class="col-2 footer-head-text">TalkieTown</h4>
+          <div class="col-2">
+            <h4 class="footer-head-text">О нас</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Наша история</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Наша команда</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Карьера</a
+            >
+          </div>
+          <div class="col-2">
+            <h4 class="footer-head-text">Помощь</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >FAQ</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Поддержка</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Контакты</a
+            >
+          </div>
+          <div class="col-3">
+            <h4 class="footer-head-text">Политики</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Конфиденциальность</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Условия использования</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Политика возврата</a
+            >
+          </div>
+          <div class="col-3">
+            <h4 class="footer-head-text">Следите за нами</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Вконтакте</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Телеграмм</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Youtube</a
+            >
+          </div>
+          <div class="col-12 d-flex justify-content-center mt-4">
+            <span>© 2024 TalkieTown. Все права защищены.</span>
+          </div>
+        </div>
+      </footer>
     </div>
-
-
-
-
-
-
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d7278d699d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
