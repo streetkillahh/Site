@@ -92,24 +92,15 @@
               <button id="Basket" class="btn link button_search me-2">
                 <i class="fa-solid fa-basket-shopping"></i>
               </button>
-              <!-- Регистрация/Вход -->
+              <!-- Профиль -->
               <div class="mx-2">
-                <a href="/Views/User/signup.html">
-                  <button
-                    type="button"
-                    class="btn secondary-btn sub-heading"
-                    style="height: 43px; margin-right: 5px"
-                  >
-                    Регистрация
-                  </button>
-                </a>
-                <a href="/Views/User/signin.html"
+                <a href="/Views/User/UserPage.html"
                   ><button
                     type="button"
                     class="btn main-btn sub-heading"
                     style="height: 43px"
                   >
-                    Вход
+                    Профиль
                   </button></a
                 >
               </div>
@@ -150,17 +141,27 @@
         <div class="col-8 p-0">
           <!-- User info tab -->
           <div class="d-flex row">
-            <!-- User avatar -->
-            <div class="col-4">
-              <img src="" alt="" />
-            </div>
             <!-- User info -->
-            <div class="col-8">
-
+            <div class="profile-header">
+              <div class="profile-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="profile-data">
+                <p><strong>Ф.И.О.</strong> Кукарский Сергей</p>
+                <p><strong>Телефон</strong> +79998887766</p>
+                <p><strong>E-mail</strong> sergey@outlook.com</p>
+              </div>
             </div>
           </div>
           <!-- Recents tab -->
-          <div></div>
+          <div class="recently-viewed">
+            <h3>Вы недавно смотрели</h3>
+            <div class="recent-items">
+              <div class="recent-item"></div>
+              <div class="recent-item"></div>
+              <div class="recent-item"></div>
+            </div>
+          </div>
         </div>
       </div>
       <footer class="border-top text-muted d-flex justify-content-center">
