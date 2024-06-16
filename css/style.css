@@ -480,3 +480,53 @@ canvas {
   margin-bottom: 10px;
 }
 
+/* PROFILE PAGE */
+
+.user-card{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  align-self: center;
+  width: 50%;
+  height: 600px;
+  background-color: aqua;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-sidebar{
+  align-items: flex-start;
+  height: 70%;
+  margin: 0px;
+}
+
+.user-info-sidebar{
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.user-info-sidebar i{
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+.user-info-sidebar h4{
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.sidebar-tab{
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.sidebar-tab i{
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.sidebar-tab h4{
+  font-size: 20px;
+}
+
+
+

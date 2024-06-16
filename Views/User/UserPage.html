@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -18,90 +26,233 @@
     ></script>
   </head>
   <body>
-    <div>
-      <!-- Header -->
+    <div class="d-flex flex-column justify-content-center">
       <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav
+          style="padding: 10px"
+          class="navbar shadow navbar-expand-lg bg-body-tertiary"
+        >
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">TalkieTown</a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a
+              class="font-inter navbar-brand"
+              style="font-weight: bold"
+              href="/index.html"
+              >TalkieTown</a
+            >
+            <div
+              style="height: 40px"
+              class="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
               <!-- Главная -->
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a
+                    class="font-inter nav-link active"
+                    aria-current="page"
+                    href="/index.html"
                     >Главная</a
                   >
                 </li>
+                <li class="nav-item">
+                  <a
+                    class="font-inter nav-link active"
+                    aria-current="page"
+                    href="/Product page/Phones.html"
+                    >Смартфоны</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="font-inter nav-link active"
+                    aria-current="page"
+                    href="#"
+                    >Аксессуары</a
+                  >
+                </li>
               </ul>
-              <!-- Parent for Search&Basket -->
+              <!-- Поиск -->
               <form class="d-flex" role="search">
                 <!-- Search -->
                 <input
-                  class="form-control me-2"
+                  class="form-control"
                   type="search"
                   placeholder="Поиск"
                   aria-label="Search"
                 />
-                <button id="a" class="btn link button_search" type="submit">
+                <button
+                  id="a"
+                  class="btn link button_search me-2"
+                  type="submit"
+                >
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-                <!-- Basket -->
-                <button id="Basket" class="btn link button_search">
-                  <i class="fa-solid fa-basket-shopping"></i>
-                </button>
               </form>
-              <!-- Выход из аккаунта -->
+              <!-- Basket -->
+              <button id="Basket" class="btn link button_search me-2">
+                <i class="fa-solid fa-basket-shopping"></i>
+              </button>
+              <!-- Регистрация/Вход -->
               <div class="mx-2">
-                <button type="button" class="btn btn-info btn-sm">Выход</button>
+                <a href="/Views/User/signup.html">
+                  <button
+                    type="button"
+                    class="btn secondary-btn sub-heading"
+                    style="height: 43px; margin-right: 5px"
+                  >
+                    Регистрация
+                  </button>
+                </a>
+                <a href="/Views/User/signin.html"
+                  ><button
+                    type="button"
+                    class="btn main-btn sub-heading"
+                    style="height: 43px"
+                  >
+                    Вход
+                  </button></a
+                >
               </div>
             </div>
           </div>
         </nav>
       </header>
-      <!-- Body -->
-      
-        
-        <!-- UserCard -->
-        <div class="m-5 row mx-auto body-user shadow-lg bg-body-tertiary rounded">
-          <p align="center">Профиль пользователя</p>
-
-          <div
-            class="h-100 col-3 shadow-lg bg-body-tertiary rounded user-image"
-          >
-            <i
-              class="fa-solid fa-user"
-              style="
-                font-size: 100px;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-              "
-            >
-            </i>
-            <button class="row"></button>
+      <!-- UserCard -->
+      <div class="user-card d-flex row mx-0">
+        <!-- Sidebar -->
+        <div class="user-sidebar row col-4 p-0 justify-content-center">
+          <div class="d-flex user-info-sidebar">
+            <i class="fa-solid fa-user"></i>
+            <h4 class="">Кукарский Сергей</h4>
           </div>
-          
-          <!-- Контактные данные -->
-          <div class="col-4">
-            <div style="text-align: right">
-              <p>Имя и фамилия:</p>
-              <p>E-mail:</p>
-              <p>Телефон:</p>
-              <p>Password:</p>
-            </div>
+          <div class="sidebar-tab d-flex">
+            <i class="fa-solid fa-user"></i>
+            <h4 class="">Профиль</h4>
           </div>
-          <div class="col-4">
-            <div>
-              <p>Кукарский Сергей</p>
-              <p>sergey@outlook.com</p>
-              <p>+79996969420</p>
-              <p>********</p>
-            </div>
+          <div class="sidebar-tab d-flex">
+            <i class="fa-solid fa-heart"></i>
+            <h4 class="">Избранное</h4>
+          </div>
+          <div class="sidebar-tab d-flex">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <h4 class="">История заказов</h4>
+          </div>
+          <div class="sidebar-tab d-flex">
+            <i class="fa-solid fa-gear"></i>
+            <h4 class="">Настройки</h4>
+          </div>
+          <div class="sidebar-tab d-flex">
+            <i class="fa-solid fa-door-open"></i>
+            <h4 class="">Выход</h4>
           </div>
         </div>
+        <!-- Tab info -->
+        <div class="col-8 p-0">
+          <!-- User info tab -->
+          <div class="d-flex row">
+            <!-- User avatar -->
+            <div class="col-4">
+              <img src="" alt="" />
+            </div>
+            <!-- User info -->
+            <div class="col-8">
 
-      
+            </div>
+          </div>
+          <!-- Recents tab -->
+          <div></div>
+        </div>
+      </div>
+      <footer class="border-top text-muted d-flex justify-content-center">
+        <!-- Footer container -->
+        <div class="footer-section d-flex row my-4 mx-0">
+          <!-- Столбцы футера -->
+          <h4 class="col-2 footer-head-text">TalkieTown</h4>
+          <div class="col-2">
+            <h4 class="footer-head-text">О нас</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Наша история</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Наша команда</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Карьера</a
+            >
+          </div>
+          <div class="col-2">
+            <h4 class="footer-head-text">Помощь</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >FAQ</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Поддержка</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Контакты</a
+            >
+          </div>
+          <div class="col-3">
+            <h4 class="footer-head-text">Политики</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Конфиденциальность</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Условия использования</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Политика возврата</a
+            >
+          </div>
+          <div class="col-3">
+            <h4 class="footer-head-text">Следите за нами</h4>
+            <a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Вконтакте</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Телеграмм</a
+            ><a
+              class="footer-text nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Youtube</a
+            >
+          </div>
+          <div class="col-12 d-flex justify-content-center mt-4">
+            <span>© 2024 TalkieTown. Все права защищены.</span>
+          </div>
+        </div>
+      </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
